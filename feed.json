@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "syrinx55.github.io",
+    "description": "",
+    "home_page_url": "https://syrinx55.github.io",
+    "feed_url": "https://syrinx55.github.io/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Jacob Alford"
+    },
+    "items": [
+    ]
+}
