@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Downloads by Version",
+  "description": "Downloads of genome_profiler package from Bioconda.",
+  "data": {
+    "url": "/vega/genome_profiler_downloads.json"
+  },
+  "width": "container",
+  "mark": {
+    "type": "line",
+    "point": { "filled": true }
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "timeUnit": "yearmonthdate",
+      "title": "Date",
+      "axis": { "labelAngle": -15 }
+    },
+    "y": {
+      "field": "delta",
+      "type": "quantitative",
+      "title": "Downloads per day"
+    },
+    "color": {
+      "field": "version",
+      "type": "nominal",
+      "title": "Version"
+    },
+    "tooltip": [
+      { "field": "version", "type": "nominal" },
+      { "field": "date", "type": "temporal" },
+      { "field": "delta", "type": "quantitative", "title": "Daily downloads" },
+      { "field": "total", "type": "quantitative", "title": "Cumulative downloads" }
+    ]
+  }
+}

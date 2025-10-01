@@ -1,0 +1,176 @@
+:root {
+  /* Backgrounds */
+  --theme: #ffffff;
+  --entry: #ffffff;
+  --tertiary: #f9f9f9;
+
+  /* Typography */
+  --primary: #ff3333;   /* headings, links */
+  --secondary: #000000; /* body text */
+  --content: #000000;   /* paragraph text */
+
+  /* Accents */
+  --border: #ff3333;
+  --link-color: #ff3333;
+}
+
+/* ===== Body text: force black ===== */
+body, p, li, .post-content, .content, .entry-content, .single .post-content, main, article {
+  color: #000000 !important;
+}
+
+/* ===== Headings: brand red ===== */
+h1, h2, h3, h4, h5, h6, .page-title, .post-title, .list-title, .home-section h2 {
+  color: #ff3333 !important;
+  font-weight: 700;
+}
+
+/* ===== Links: brand red ===== */
+a { color: #ff3333; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== Home header: TWO red underlines (exact #ff3333) ===== */
+.home-intro{
+  position: relative;
+  display: inline-block;    /* shrink width to text so lines match */
+  margin-top: 0;            /* keep it flush to the top content area */
+  padding-bottom: .75rem;   /* space for first line */
+  margin-bottom: 1.5rem;    /* breathing room below lines */
+}
+.home-intro::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  background: #ff3333;      /* full-length line */
+}
+.home-intro::before{
+  content: "";
+  position: absolute;
+  left: 0; bottom: -6px;    /* second line sits just below the first */
+  width: 60%;
+  height: 3px;
+  background: #ff3333;      /* shorter 60% line */
+}
+
+/* Contact row colors under the name on home */
+.home-contact a{ color:#000000; }
+.home-contact a:hover{ color:#ff3333; }
+
+/* Contact page list with icons */
+.contact-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.contact-list li{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .5rem 0;
+}
+.contact-list .icon{
+  display: inline-flex;
+  width: 22px; height: 22px;
+}
+.contact-list a{
+  color: #000;
+}
+.contact-list a:hover{
+  color: #ff3333;
+  text-decoration: underline;
+}
+
+/* ===== Optional left sidebar menu styles (if you use a left nav layout) ===== */
+.site-sidebar .sidebar-nav a {
+  color: #ff3333 !important;
+  border-left: 3px solid transparent;
+  padding-left: .5rem;
+}
+.site-sidebar .sidebar-nav a:hover,
+.site-sidebar .sidebar-nav a:focus,
+.site-sidebar .sidebar-nav a.active,
+.site-sidebar .sidebar-nav a[aria-current="page"]{
+  color:#ff3333 !important;
+  border-left-color:#ff3333 !important;
+  text-decoration: underline;
+}
+
+/* Cards for trackers */
+.tracker-grid{ display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+.tracker-card{ border:1px solid #ff3333; border-radius:10px; padding:1rem; }
+.tracker-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+}
+
+.tracker-card {
+  border: 1px solid #ff3333;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fff;
+}
+
+/* --- GitHub repo list + mini chart --- */
+.repo-list { list-style: none; padding-left: 0; margin: 0; }
+.repo-item + .repo-item { margin-top: .75rem; }
+.repo-row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: baseline; }
+.repo-name { font-weight: 600; }
+.repo-meta { color: #555; }
+
+/* Sparkline */
+.mini-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 30px;             /* matches max bar height (28) + a little headroom */
+  margin-top: .4rem;
+}
+.mini-chart .mini-bar {
+  width: 3px;
+  background: #ff3333;
+  border-radius: 2px 2px 0 0;
+}
+
+/* --- Bioconda list + downloads bar --- */
+.bioconda-list { list-style: none; padding-left: 0; margin: 0; }
+.bioconda-item + .bioconda-item { margin-top: .75rem; }
+.pkg-row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: baseline; }
+.pkg-name { font-weight: 600; }
+.pkg-meta { color: #555; }
+
+.dl-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem;
+  align-items: center;
+  margin-top: .35rem;
+}
+.dl-bar {
+  height: 8px;
+  background: #ff3333;
+  border-radius: 4px;
+}
+.dl-count { color: #444; font-variant-numeric: tabular-nums; }
+.pkg-summary { color: #333; margin-top: .25rem; }
+
+.pkg-install {
+  margin-top: .35rem;
+}
+.pkg-install code {
+  background: #f7f7f7;
+  padding: .15rem .35rem;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .6rem;
+  margin-top: .35rem;
+}
+.badge-row img {
+  height: 20px;
+}
