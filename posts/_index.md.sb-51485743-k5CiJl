@@ -1,9 +1,0 @@
-+++
-title = "Blog"
-description = "My personal blog"
-layout = "list"
-+++
-
-<p class="blog-intro">
-  Greetings! This is my blog, where I will share thoughts, ideas, life and career updates, as well as anything else worth sharing.
-</p>
