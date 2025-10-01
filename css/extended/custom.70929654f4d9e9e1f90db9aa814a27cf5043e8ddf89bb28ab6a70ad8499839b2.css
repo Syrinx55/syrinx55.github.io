@@ -1,13 +1,13 @@
 :root {
   /* Backgrounds */
-  --theme: #ffffff;
-  --entry: #ffffff;
+  --theme: #000000;
+  --entry: #000000;
   --tertiary: #f9f9f9;
 
   /* Typography */
   --primary: #ff3333;   /* headings, links */
-  --secondary: #000000; /* body text */
-  --content: #000000;   /* paragraph text */
+  --secondary: #ffffff; /* body text */
+  --content: #ffffff;   /* paragraph text */
 
   /* Accents */
   --border: #ff3333;
@@ -16,7 +16,7 @@
 
 /* ===== Body text: force black ===== */
 body, p, li, .post-content, .content, .entry-content, .single .post-content, main, article {
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 
 /* ===== Headings: brand red ===== */
@@ -54,7 +54,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* Contact row colors under the name on home */
-.home-contact a{ color:#000000; }
+.home-contact a{ color:#ffffff; }
 .home-contact a:hover{ color:#ff3333; }
 
 /* Contact page list with icons */
@@ -109,7 +109,7 @@ a:hover { text-decoration: underline; }
   border: 1px solid #ff3333;
   border-radius: 10px;
   padding: 1rem;
-  background: #fff;
+  background: #000;
 }
 
 /* --- GitHub repo list + mini chart --- */
@@ -159,7 +159,7 @@ a:hover { text-decoration: underline; }
   margin-top: .35rem;
 }
 .pkg-install code {
-  background: #f7f7f7;
+  background: #000;
   padding: .15rem .35rem;
   border-radius: 4px;
   border: 1px solid #eee;
